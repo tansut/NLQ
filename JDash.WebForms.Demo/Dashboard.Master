@@ -1,0 +1,289 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Dashboard.Master.cs" Inherits="JDash.WebForms.Demo.Main" %>
+<%@ Register Assembly="JDash.WebForms" Namespace="JDash.WebForms" TagPrefix="jdash" %>
+<%@ Register Src="~/Controls/CreateDashboardWindow.ascx" TagPrefix="uc1" TagName="CreateDashboardWindow" %>
+<%@ Register Src="~/Controls/CreateDashletWindow.ascx" TagPrefix="uc1" TagName="CreateDashletWindow" %>
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>
+        <asp:Literal ID="ctlPageTitle" runat="server" Text="<%$ Resources:Global, PageTitle%>"></asp:Literal></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <asp:ContentPlaceHolder ID="ctlHeaderContent" runat="server">
+        <meta name="keywords" content="asp.net dashboard" />
+        <meta name="description" content="Online demo of JDash.Net - Dashboard framework for Asp.Net Web Forms" />
+    </asp:ContentPlaceHolder>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="copyright" content="Kalitte Inc, www.jdash.net" />
+    <meta name="rating" content="general" />
+    <meta name="revisit-after" content="3 day" />
+    <meta name="robots" content="index,follow,all" />
+    <link rel="shortcut icon" href="/vpath/jdashLogo.ico" type="image/x-icon" />
+
+
+    <link href="Resource/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="Resource/css/switch.css" rel="stylesheet" />
+    <link href="resource/css/app.css" rel="stylesheet" />
+    <style>
+        body {
+            padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+        }
+    </style>
+
+    <script src="Resource/js/jquery.js"></script>
+    <script src="Resource/js/bootstrap.min.js"></script>
+    <script src="Resource/js/bootstrapSwitch.js"></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+
+
+
+    <form class="aspnetForm" id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+        <jdash:ResourceManager InitialThemeId="flat" InitialThemeStyleId="w" runat="server" ID="ctlResourceManager"   />
+        <uc1:CreateDashboardWindow runat="server" ID="CreateDashboardWindow" />
+        <uc1:CreateDashletWindow runat="server" ID="CreateDashletWindow" />
+
+
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div id="pageToolbar">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="http://localhost:50744/dashboard">Kalitte DataVis Dashboard</a>
+                </div>
+                <div class="navbar-collapse collapse">
+
+                    <asp:UpdatePanel runat="server" UpdateMode="Conditional" ChildrenAsTriggers="false">
+                        <ContentTemplate>
+                            <div id="ctlDashboardToolbar1" runat="server" class="container">
+                                <ul class="nav navbar-nav">
+
+                                    <li>
+
+                                        <jdemo:BsLinkButton CssClass="createDashboardLink" DisableTheming="true" runat="server" ID="ctlCreateDashboardWindow" Text="<%$ Resources:Global, Create%>" IconClass="glyphicon glyphicon-plus" OnClick="ctlCreateDashboardWindow_Click" /></li>
+
+
+                                </ul>
+
+                                <ul class="nav navbar-nav navbar-right">                                   
+                                    <li>
+                                        <asp:UpdatePanel runat="server" ID="UpdatePanel1" UpdateMode="Conditional" ChildrenAsTriggers="false">
+                                            <ContentTemplate>
+                                                <div class="designSwitch">
+                                                    <jdemo:BsSwitch Visible="false" data-on="danger" data-off="primary" CssClass="navSwitch pull-left" runat="server" ID="ctlDesignModeSw" Checked="true" OnLabel="<%$ Resources:Global, Design%>" OffLabel="<%$ Resources:Global, View%>" OnChange="readonlyView_CheckedChanged" />
+
+                                                </div>
+                                            </ContentTemplate>
+                                        </asp:UpdatePanel>
+                                    </li>
+                                </ul>
+
+
+
+
+                            </div>
+
+
+                        </ContentTemplate>
+                    </asp:UpdatePanel>
+
+
+                </div>
+
+
+
+            </div>
+        </div>
+
+
+
+
+        <div class="container-fluid" id="dashboardContent">
+            <div class="container well sloganContainer pageHeader">
+                <div class="row">
+                  
+                  
+                </div>
+
+
+                <div class="row">
+                </div>
+
+            </div>
+
+
+            <nav class="navbar navbar-default dashTools" role="navigation">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#tools-nav-bar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="tools-nav-bar">
+                    <asp:UpdatePanel runat="server" ID="dashboardInfoUp" UpdateMode="Conditional" ChildrenAsTriggers="false">
+                        <ContentTemplate>
+                            <ul class="nav navbar-nav">
+                                <li class="dropdown">
+                                    <asp:UpdatePanel ID="dashboardsUp" UpdateMode="Conditional" ChildrenAsTriggers="false" runat="server">
+                                        <ContentTemplate>
+                                            <a id="dashboardDropdown" class="navbar-brand dropdown-toggle" data-toggle="dropdown" runat="server" href="#">
+
+                                                <asp:Literal runat="server" ID="ctlCurrentDashboardTitle" Text="View Dashboard"></asp:Literal>
+                                                <b style="margin-top: 8px; margin-left: 5px;" class="caret"></b>
+
+                                            </a>
+
+                                            <ul class="dropdown-menu">
+                                                <asp:Repeater ID="groupsRepeater" runat="server">
+                                                    <ItemTemplate>
+                                                        <li id="Li1" class="dropdown-header" runat="server" innerhtml='<%# string.IsNullOrEmpty(Eval("group") as string) ? "Others": Eval("group") %>'></li>
+                                                        <li class="divider"></li>
+                                                        <asp:Repeater DataSource='<%# getDashboardsOfGroup((string)Eval("group")) %>' ID="dashboardsRepeater" runat="server" OnItemCommand="dashboardsRepeater_ItemCommand">
+                                                            <HeaderTemplate>
+                                                                <li>
+                                                            </HeaderTemplate>
+                                                            <FooterTemplate>
+                                                                </li>
+                                                            </FooterTemplate>
+                                                            <ItemTemplate>
+                                                                <%-- Uncomment to load during postback --%>
+                                                                <%--<asp:LinkButton CommandName="showDashboard" CommandArgument='<%# Eval("id") %>' runat="server" ID="dashboardTitle" Text='<%# Eval("Title") %>'></asp:LinkButton>--%>
+                                                                <asp:HyperLink ID="HyperLink1" NavigateUrl='<%# string.Format("~/dashboard?id={0}&R={1}",  Eval("id"), new Random().Next(int.MaxValue)) %>' runat="server" Text='<%# Eval("Title") %>' />
+                                                            </ItemTemplate>
+                                                        </asp:Repeater>
+
+                                                    </ItemTemplate>
+                                                    <FooterTemplate>
+                                                        <li class="divider"></li>
+                                                        <li>
+
+                                                            <jdemo:BsLinkButton DisableTheming="true" runat="server" ID="ctlCreateDashboardWindow" Text="<%$ Resources:Global, Create%>" IconClass="glyphicon glyphicon-plus" OnClick="ctlCreateDashboardWindow_Click" /></li>
+
+                                                        <li>
+                                                    </FooterTemplate>
+                                                </asp:Repeater>
+                                            </ul>
+
+                                        </ContentTemplate>
+                                    </asp:UpdatePanel>
+                                </li>
+                                <li class="divider-vertical"></li>
+                                <li>
+                                    <jdemo:BsLinkButton Visible="false" DisableTheming="true" runat="server" Text="<%$ Resources:Global, AddDashlet%>" ID="createDashetBtn" OnClientClick="showCreateDashletControl(); return false;" />
+                                </li>
+
+                                <li>
+                                    <jdemo:BsLinkButton Visible="false" DisableTheming="true" runat="server" ID="ctlEditDashboard" IconClass="glyphicon glyphicon-edit" Text="<%$ Resources:Global, Edit%>" OnClick="ctlEditDashboard_Click" /></li>
+                                <li>
+                                    <jdemo:BsLinkButton Visible="false" OnClientClick="return confirm('Delete dashboard?');" OnClick="deleteDashboardBtn_Click" DisableTheming="true" runat="server" ID="deleteDashboardBtn" IconClass="glyphicon glyphicon-trash" Text="<%$ Resources:Global, Delete%>"></jdemo:BsLinkButton></li>
+
+                            </ul>
+
+                        </ContentTemplate>
+                    </asp:UpdatePanel>
+
+                    <asp:UpdatePanel runat="server" ID="ctlThemePanel" UpdateMode="Conditional" ChildrenAsTriggers="false">
+                        <ContentTemplate>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li class="dropdown">
+
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">More Themes<b class="caret"></b></a>
+                                    <ul class="dropdown-menu">
+                                        <asp:Repeater ID="ctlThemesRepeater" runat="server" OnItemCommand="ctlThemesRepeater_ItemCommand">
+                                            <ItemTemplate>
+                                                <li>
+                                                    <asp:LinkButton ID="LinkButton1" Text='<%# Eval("Name") %>' CommandName="selectTheme" CommandArgument='<%# Eval("Name") %>' runat="server" />
+                                                </li>
+                                            </ItemTemplate>
+                                            <SeparatorTemplate>
+                                                <li class="divider"></li>
+                                            </SeparatorTemplate>
+                                            <AlternatingItemTemplate>
+
+                                                <li>
+                                                    <asp:LinkButton ID="LinkButton2" Text='<%# Eval("Name") %>' CommandName="selectTheme" CommandArgument='<%# Eval("Name") %>' runat="server" />
+                                                </li>
+                                            </AlternatingItemTemplate>
+
+                                        </asp:Repeater>
+                                    </ul>
+
+                                </li>
+                                <%--                                <li>
+                                    <p class="navbar-text">Signed in as Mark Otto</p>
+                                    res
+                                </li>--%>
+                                <li>
+                                    <jdash:ThemeStylesList ID="themeStylesList" runat="server"></jdash:ThemeStylesList>
+                                </li>
+                            </ul>
+                        </ContentTemplate>
+                    </asp:UpdatePanel>
+                </div>
+                <!-- /.navbar-collapse -->
+            </nav>
+
+
+
+
+
+
+            <asp:ContentPlaceHolder ID="pageContent" runat="server">
+            </asp:ContentPlaceHolder>
+
+            <asp:UpdateProgress DisplayAfter="3000" ID="UpdateProgress1" runat="server">
+                <ProgressTemplate>
+                    <div class="dashStatus">
+
+                        <img src="Resource/img/loading-blue.gif" alt="" />
+                    </div>
+                </ProgressTemplate>
+            </asp:UpdateProgress>
+            <div style="display: none" class="dashStatus d-dashboard-loadStatus"></div>
+
+
+        </div>
+    </form>
+
+    <div id="footer">
+        <div class="container">
+        </div>
+
+    </div>
+
+
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-39892625-1']);
+        _gaq.push(['_setDomainName', 'jdash.net']);
+        _gaq.push(['_setAllowLinker', true]);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+
+</body>
+</html>

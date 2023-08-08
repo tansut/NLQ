@@ -1,0 +1,525 @@
+﻿<DataModel name="TestModel" formatVersion="11" modelVersion="9" defQuery="" id="1baacbd2-8064-416e-baa4-f079e1e0734e">
+  <Description />
+  <CustomInfo />
+  <DMEOptions>
+    <listBoxTablesWidth>279</listBoxTablesWidth>
+  </DMEOptions>
+  <DBParams>
+    <SqlDialect>MS SQL</SqlDialect>
+    <ConnectionString>Data Source=.\SQLExpress;Initial Catalog=MB8SQLTestDB;Integrated Security=True</ConnectionString>
+    <LoginPrompt>False</LoginPrompt>
+    <GateClass>Korzh.EasyQuery.DataGates.SqlClientGate</GateClass>
+  </DBParams>
+  <Tables>
+    <Table class="db" alias="ACTIVITY" schema="dbo" db="" dsgnLayout="" priority="1000" name="ACTIVITY" hints="" quote="False" />
+    <Table class="db" alias="ACTIVITY_DATA" schema="dbo" db="" dsgnLayout="" priority="1000" name="ACTIVITY_DATA" hints="" quote="False" />
+    <Table class="db" alias="LINK" schema="dbo" db="" dsgnLayout="" priority="1000" name="LINK" hints="" quote="False" />
+    <Table class="db" alias="LINK_DATA" schema="dbo" db="" dsgnLayout="" priority="1000" name="LINK_DATA" hints="" quote="False" />
+    <Table class="db" alias="REGION" schema="dbo" db="" dsgnLayout="" priority="1000" name="REGION" hints="" quote="False" />
+    <Table class="db" alias="SUB_TIME_POINT" schema="dbo" db="" dsgnLayout="" priority="1000" name="SUB_TIME_POINT" hints="" quote="False" />
+    <Table class="db" alias="TIME_POINT" schema="dbo" db="" dsgnLayout="" priority="1000" name="TIME_POINT" hints="" quote="False" />
+  </Tables>
+  <Links>
+    <Link table1="ACTIVITY" table2="LINK" type="Inner" QF="False">
+      <Condition type="FF" expr1="ID" expr2="SOURCE_ACTIVITY_ID" op="=" />
+    </Link>
+    <Link table1="ACTIVITY" table2="ACTIVITY_DATA" type="Inner" QF="False">
+      <Condition type="FF" expr1="ID" expr2="ACTIVITY_ID" op="=" />
+    </Link>
+    <Link table1="TIME_POINT" table2="LINK_DATA" type="Inner" QF="False">
+      <Condition type="FF" expr1="ID" expr2="TIME_POINT_ID" op="=" />
+    </Link>
+    <Link table1="TIME_POINT" table2="ACTIVITY_DATA" type="Inner" QF="False">
+      <Condition type="FF" expr1="ID" expr2="TIME_POINT_ID" op="=" />
+    </Link>
+    <Link table1="SUB_TIME_POINT" table2="LINK_DATA" type="Inner" QF="False">
+      <Condition type="FF" expr1="ID" expr2="SUB_TIME_POINT_ID" op="=" />
+    </Link>
+    <Link table1="SUB_TIME_POINT" table2="ACTIVITY_DATA" type="Inner" QF="False">
+      <Condition type="FF" expr1="ID" expr2="SUB_TIME_POINT_ID" op="=" />
+    </Link>
+    <Link table1="REGION" table2="ACTIVITY" type="Inner" QF="False">
+      <Condition type="FF" expr1="ID" expr2="REGION_ID" op="=" />
+    </Link>
+    <Link table1="REGION" table2="ACTIVITY_DATA" type="Inner" QF="False">
+      <Condition type="FF" expr1="ID" expr2="REGION_ID" op="=" />
+    </Link>
+    <Link table1="LINK" table2="LINK_DATA" type="Inner" QF="False">
+      <Condition type="FF" expr1="ID" expr2="LINK_ID" op="=" />
+    </Link>
+  </Links>
+  <Operators>
+    <Operator id="Equal" caption="is equal to" expr="{expr1} = {expr2}" format="{expr1} [[is equal to]] {expr2}" constFmt="{const}" kind="Scalar" caseIns="False" group="Common operators" cond="False" tables="">
+      <Types>String,WideString,Byte,Word,Int,Int64,Bool,Float,Currency,BCD,Autoinc,Memo,FixedChar</Types>
+      <Operands defType="Unknown" />
+    </Operator>
+    <Operator id="NotEqual" caption="is not equal to" expr="{expr1} &lt;&gt; {expr2}" format="{expr1} [[is not equal to]] {expr2}" constFmt="{const}" kind="Scalar" caseIns="False" group="Common operators" cond="False" tables="">
+      <Types>String,WideString,Byte,Word,Int,Int64,Bool,Float,Currency,BCD,Autoinc,Memo,FixedChar</Types>
+      <Operands defType="Unknown" />
+    </Operator>
+    <Operator id="LessThan" caption="is less than" expr="{expr1} &lt; {expr2}" format="{expr1} [[is less than]] {expr2}" constFmt="{const}" kind="Scalar" caseIns="False" group="Common operators" cond="False" tables="">
+      <Types>String,WideString,Byte,Word,Int,Int64,Bool,Float,Currency,BCD,Autoinc,Memo,FixedChar</Types>
+      <Operands defType="Unknown" />
+    </Operator>
+    <Operator id="LessOrEqual" caption="is less than or equal to" expr="{expr1} &lt;= {expr2}" format="{expr1} [[is less than or equal to]] {expr2}" constFmt="{const}" kind="Scalar" caseIns="False" group="Common operators" cond="False" tables="">
+      <Types>String,WideString,Byte,Word,Int,Int64,Bool,Float,Currency,BCD,Autoinc,Memo,FixedChar</Types>
+      <Operands defType="Unknown" />
+    </Operator>
+    <Operator id="GreaterThan" caption="is greater than" expr="{expr1} &gt; {expr2}" format="{expr1} [[is greater than]] {expr2}" constFmt="{const}" kind="Scalar" caseIns="False" group="Common operators" cond="False" tables="">
+      <Types>String,WideString,Byte,Word,Int,Int64,Bool,Float,Currency,BCD,Autoinc,Memo,FixedChar</Types>
+      <Operands defType="Unknown" />
+    </Operator>
+    <Operator id="GreaterOrEqual" caption="is greater than or equal to" expr="{expr1} &gt;= {expr2}" format="{expr1} [[is greater than or equal to]] {expr2}" constFmt="{const}" kind="Scalar" caseIns="False" group="Common operators" cond="False" tables="">
+      <Types>String,WideString,Byte,Word,Int,Int64,Bool,Float,Currency,BCD,Autoinc,Memo,FixedChar</Types>
+      <Operands defType="Unknown" />
+    </Operator>
+    <Operator id="IsNull" caption="is null" expr="{expr1} IS NULL" format="{expr1} [[is null]] " constFmt="{const}" kind="Scalar" caseIns="False" group="Common operators" cond="False" tables="">
+      <Types>String,WideString,Byte,Word,Int,Int64,Bool,Float,Currency,BCD,Autoinc,Memo,FixedChar</Types>
+      <Operands defType="Unknown" />
+    </Operator>
+    <Operator id="IsNotNull" caption="is not null" expr="{expr1} IS NOT NULL" format="{expr1} [[is not null]] " constFmt="{const}" kind="Scalar" caseIns="False" group="Common operators" cond="False" tables="">
+      <Types>String,WideString,Byte,Word,Int,Int64,Bool,Float,Currency,BCD,Autoinc,Memo,FixedChar</Types>
+      <Operands defType="Unknown" />
+    </Operator>
+    <Operator id="IsTrue" caption="is true" expr="{expr1} = ${true}" format="{expr1} [[is true]]" constFmt="{const}" kind="Scalar" caseIns="False" group="Boolean operators" cond="False" tables="">
+      <Types>Bool</Types>
+      <Operands defType="Unknown" />
+    </Operator>
+    <Operator id="NotTrue" caption="is not true" expr="(({expr1} &lt;&gt; ${true}) OR ({expr1} IS NULL))" format="{expr1} [[is not true]]" constFmt="{const}" kind="Scalar" caseIns="False" group="Boolean operators" cond="False" tables="">
+      <Types>Bool</Types>
+      <Operands defType="Unknown" />
+    </Operator>
+    <Operator id="InList" caption="is in list" expr="{expr1} in ({expr2})" format="{expr1} [[is in list]] {expr2}" constFmt="{const}" kind="List" caseIns="False" group="Common operators" cond="False" tables="">
+      <Types>String,WideString,Byte,Word,Int,Int64,Bool,Float,Currency,BCD,Autoinc,Memo,FixedChar</Types>
+      <Operands defType="Unknown" />
+    </Operator>
+    <Operator id="NotInList" caption="is not in list" expr="NOT ({expr1} in ({expr2}))" format="{expr1} [[is not in list]] {expr2}" constFmt="{const}" kind="List" caseIns="False" group="Common operators" cond="False" tables="">
+      <Types>String,WideString,Byte,Word,Int,Int64,Bool,Float,Currency,BCD,Autoinc,Memo,FixedChar</Types>
+      <Operands defType="Unknown" />
+    </Operator>
+    <Operator id="Between" caption="is between" expr="{expr1} BETWEEN {expr2} AND {expr3}" format="{expr1} [[is between]] {expr2} and {expr3}" constFmt="{const}" kind="Scalar" caseIns="False" group="Common operators" cond="False" tables="">
+      <Types>String,WideString,Byte,Word,Int,Int64,Bool,Float,Currency,BCD,Autoinc,Memo,FixedChar</Types>
+      <Operands defType="Unknown" />
+    </Operator>
+    <Operator id="NotBetween" caption="is not between" expr="NOT ({expr1} BETWEEN {expr2} AND {expr3})" format="{expr1} [[is not between]] {expr2} and {expr3}" constFmt="{const}" kind="Scalar" caseIns="False" group="Common operators" cond="False" tables="">
+      <Types>String,WideString,Byte,Word,Int,Int64,Bool,Float,Currency,BCD,Autoinc,Memo,FixedChar</Types>
+      <Operands defType="Unknown" />
+    </Operator>
+    <Operator id="StartsWith" caption="starts with" expr="{expr1} LIKE {expr2}" format="{expr1} [[starts with]] {expr2}" constFmt="{const}{ws}" kind="Scalar" caseIns="False" group="String operators" cond="False" tables="">
+      <Types>String,WideString,Memo,FixedChar</Types>
+      <Operands defType="Unknown" />
+      <Editors>
+        <Default id="" type="EDIT" resType="String" defValue="" />
+      </Editors>
+    </Operator>
+    <Operator id="NotStartsWith" caption="does not start with" expr="NOT ({expr1} LIKE {expr2})" format="{expr1} [[does not start with]] {expr2}" constFmt="{const}{ws}" kind="Scalar" caseIns="False" group="String operators" cond="False" tables="">
+      <Types>String,WideString,Memo,FixedChar</Types>
+      <Operands defType="Unknown" />
+      <Editors>
+        <Default id="" type="EDIT" resType="String" defValue="" />
+      </Editors>
+    </Operator>
+    <Operator id="Contains" caption="contains" expr="{expr1} LIKE {expr2}" format="{expr1} [[contains]] {expr2}" constFmt="{ws}{const}{ws}" kind="Scalar" caseIns="False" group="String operators" cond="False" tables="">
+      <Types>String,WideString,Memo,FixedChar</Types>
+      <Operands defType="Unknown" />
+      <Editors>
+        <Default id="" type="EDIT" resType="String" defValue="" />
+      </Editors>
+    </Operator>
+    <Operator id="NotContains" caption="does not contain" expr="NOT ({expr1} LIKE {expr2})" format="{expr1} [[does not contain]] {expr2}" constFmt="{ws}{const}{ws}" kind="Scalar" caseIns="False" group="String operators" cond="False" tables="">
+      <Types>String,WideString,Memo,FixedChar</Types>
+      <Operands defType="Unknown" />
+      <Editors>
+        <Default id="" type="EDIT" resType="String" defValue="" />
+      </Editors>
+    </Operator>
+    <Operator id="InSubQuery" caption="in sub query" expr="{expr1} IN ({expr2})" format="{expr1} [[in sub query]] {expr2}" constFmt="{const}" kind="Query" caseIns="False" group="Common operators" cond="False" tables="">
+      <Types>String,WideString,Byte,Word,Int,Int64,Bool,Float,Currency,BCD,Autoinc,Memo,FixedChar</Types>
+      <Operands defType="Unknown" />
+    </Operator>
+    <Operator id="DateBeforeSpecial" caption="is before (special date)" expr="{expr1} &lt; {expr2}" format="{expr1} [[is before]] {expr2}" constFmt="{const}" kind="Scalar" caseIns="False" group="Date/time operators" cond="False" tables="">
+      <Types>Date,DateTime</Types>
+      <Operands defType="Unknown" />
+      <Editors>
+        <Default id="" type="CUSTOMLIST" resType="Unknown" name="SpecDateValues" />
+      </Editors>
+    </Operator>
+    <Operator id="DateBeforePrecise" caption="is before (precise date)" expr="{expr1} &lt; {expr2}" format="{expr1} [[is before]] {expr2}" constFmt="{const}" kind="Scalar" caseIns="False" group="Date/time operators" cond="False" tables="">
+      <Types>Date,DateTime</Types>
+      <Operands defType="Unknown" />
+      <Editors>
+        <Default id="" type="DATETIME" resType="Unknown" />
+      </Editors>
+    </Operator>
+    <Operator id="DateAfterSpecial" caption="is after (special date)" expr="{expr1} &gt;= {expr2}" format="{expr1} [[is after]] {expr2}" constFmt="{const}" kind="Scalar" caseIns="False" group="Date/time operators" cond="False" tables="">
+      <Types>Date,DateTime</Types>
+      <Operands defType="Unknown" />
+      <Editors>
+        <Default id="" type="CUSTOMLIST" resType="Unknown" name="SpecDateValues" />
+      </Editors>
+    </Operator>
+    <Operator id="DateAfterPrecise" caption="is after (precise date)" expr="{expr1} &gt;= {expr2}" format="{expr1} [[is after]] {expr2}" constFmt="{const}" kind="Scalar" caseIns="False" group="Date/time operators" cond="False" tables="">
+      <Types>Date,DateTime</Types>
+      <Operands defType="Unknown" />
+      <Editors>
+        <Default id="" type="DATETIME" resType="Unknown" />
+      </Editors>
+    </Operator>
+    <Operator id="DatePeriodPrecise" caption="is between" expr="{expr1} BETWEEN {expr2} AND {expr3}" format="{expr1} [[is between]] {expr2} and {expr3}" constFmt="{const}" kind="Scalar" caseIns="False" group="Date/time operators" cond="False" tables="">
+      <Types>Date,DateTime</Types>
+      <Operands defType="Unknown" />
+      <Editors>
+        <Default id="" type="DATETIME" resType="Unknown" />
+      </Editors>
+    </Operator>
+    <Operator id="DateEqualSpecial" caption="is (special date)" expr="{expr1} = {expr2}" format="{expr1} [[is]] {expr2}" constFmt="{const}" kind="Scalar" caseIns="False" group="Date/time operators" cond="False" tables="">
+      <Types>Date,DateTime</Types>
+      <Operands defType="Unknown" />
+      <Editors>
+        <Default id="" type="CUSTOMLIST" resType="Unknown" name="SpecDateValues" />
+      </Editors>
+    </Operator>
+    <Operator id="DateEqualPrecise" caption="is (precise date)" expr="{expr1} = {expr2}" format="{expr1} [[is]] {expr2}" constFmt="{const}" kind="Scalar" caseIns="False" group="Date/time operators" cond="False" tables="">
+      <Types>Date,DateTime</Types>
+      <Operands defType="Unknown" />
+      <Editors>
+        <Default id="" type="DATETIME" resType="Unknown" />
+      </Editors>
+    </Operator>
+    <Operator id="DateNotEqualSpecial" caption="is not (special date)" expr="{expr1} &lt;&gt; {expr2}" format="{expr1} [[is not]] {expr2}" constFmt="{const}" kind="Scalar" caseIns="False" group="Date/time operators" cond="False" tables="">
+      <Types>Date,DateTime</Types>
+      <Operands defType="Unknown" />
+      <Editors>
+        <Default id="" type="CUSTOMLIST" resType="Unknown" name="SpecDateValues" />
+      </Editors>
+    </Operator>
+    <Operator id="DateNotEqualPrecise" caption="is not (precise date)" expr="{expr1} &lt;&gt; {expr2}" format="{expr1} [[is not]] {expr2}" constFmt="{const}" kind="Scalar" caseIns="False" group="Date/time operators" cond="False" tables="">
+      <Types>Date,DateTime</Types>
+      <Operands defType="Unknown" />
+      <Editors>
+        <Default id="" type="DATETIME" resType="Unknown" />
+      </Editors>
+    </Operator>
+    <Operator id="TimeBeforeSpecial" caption="is before (special time)" expr="{expr1} &lt; {expr2}" format="{expr1} [[is before]] {expr2}" constFmt="{const}" kind="Scalar" caseIns="False" group="Date/time operators" cond="False" tables="">
+      <Types>Time</Types>
+      <Operands defType="Unknown" />
+      <Editors>
+        <Default id="" type="CUSTOMLIST" resType="Unknown" name="SpecTimeValues" />
+      </Editors>
+    </Operator>
+    <Operator id="TimeBeforePrecise" caption="is before (precise time)" expr="{expr1} &lt; {expr2}" format="{expr1} [[is before]] {expr2}" constFmt="{const}" kind="Scalar" caseIns="False" group="Date/time operators" cond="False" tables="">
+      <Types>Time</Types>
+      <Operands defType="Unknown" />
+      <Editors>
+        <Default id="" type="DATETIME" resType="Unknown" />
+      </Editors>
+    </Operator>
+    <Operator id="TimeAfterSpecial" caption="is after (special time)" expr="{expr1} &gt;= {expr2}" format="{expr1} [[is after]] {expr2}" constFmt="{const}" kind="Scalar" caseIns="False" group="Date/time operators" cond="False" tables="">
+      <Types>Time</Types>
+      <Operands defType="Unknown" />
+      <Editors>
+        <Default id="" type="CUSTOMLIST" resType="Unknown" name="SpecTimeValues" />
+      </Editors>
+    </Operator>
+    <Operator id="TimeAfterPrecise" caption="is after (precise time)" expr="{expr1} &gt;= {expr2}" format="{expr1} [[is after]] {expr2}" constFmt="{const}" kind="Scalar" caseIns="False" group="Date/time operators" cond="False" tables="">
+      <Types>Time</Types>
+      <Operands defType="Unknown" />
+      <Editors>
+        <Default id="" type="DATETIME" resType="Unknown" />
+      </Editors>
+    </Operator>
+    <Operator id="TimePeriodPrecise" caption="is between" expr="{expr1} BETWEEN {expr2} AND {expr3}" format="{expr1} [[is between]] {expr2} and {expr3}" constFmt="{const}" kind="Scalar" caseIns="False" group="Date/time operators" cond="False" tables="">
+      <Types>Time</Types>
+      <Operands defType="Unknown" />
+      <Editors>
+        <Default id="" type="DATETIME" resType="Unknown" />
+      </Editors>
+    </Operator>
+    <Operator id="MaximumOfAttr" caption="is maximum of" expr="{expr1} = (SELECT MAX({expr2.field}) from {expr2.table})" format="{expr1} [[is equal to maximum of]] {expr2}" constFmt="{const}" kind="Attribute" caseIns="False" group="Other operators" cond="False" tables="">
+      <Types>String,WideString,Byte,Word,Int,Int64,Bool,Float,Currency,BCD,Autoinc,Memo,FixedChar,Date,DateTime,Time</Types>
+      <Operands defType="Unknown" />
+    </Operator>
+  </Operators>
+  <Editors />
+  <Entities maxId="0">
+    <Entity name="ACTIVITY" UIC="False" UIR="False" UIS="False">
+      <UserData />
+      <Attr id="ACTIVITY.ID" kind="Data" expr="ID" caption="ID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ACTIVITY">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+        <Editors />
+        <Description />
+      </Attr>
+      <Attr id="ACTIVITY.ACTIVITY_TYPE_ID" kind="Data" expr="ACTIVITY_TYPE_ID" caption="ACTIVITY_TYPE_ID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ACTIVITY">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+        <Editors />
+        <Description />
+      </Attr>
+      <Attr id="ACTIVITY.BASE_SCENARIO" kind="Data" expr="BASE_SCENARIO" caption="BASE_SCENARIO" type="Bool" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ACTIVITY">
+        <Operators>IsTrue,NotTrue</Operators>
+        <Editors />
+      </Attr>
+      <Attr id="ACTIVITY.REGION_ID" kind="Data" expr="REGION_ID" caption="REGION_ID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ACTIVITY">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+        <Editors />
+      </Attr>
+      <Attr id="ACTIVITY.SHADOW_SOURCE_ACTIVITY_ID" kind="Data" expr="SHADOW_SOURCE_ACTIVITY_ID" caption="SHADOW_SOURCE_ACTIVITY_ID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ACTIVITY">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+        <Editors />
+        <Description />
+      </Attr>
+    </Entity>
+    <Entity name="ACTIVITY_DATA" UIC="False" UIR="False" UIS="False">
+      <UserData />
+      <Attr id="ACTIVITY_DATA.DATA_VALUE" kind="Data" expr="DATA_VALUE" caption="DATA_VALUE" type="Float" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ACTIVITY_DATA">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+        <Editors />
+        <Description />
+      </Attr>
+      <Attr id="ACTIVITY_DATA.DATA_COLUMN" kind="Data" expr="DATA_COLUMN" caption="DATA_COLUMN" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ACTIVITY_DATA">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+        <Editors />
+      </Attr>
+      <Attr id="ACTIVITY_DATA.DATA_ROW" kind="Data" expr="DATA_ROW" caption="DATA_ROW" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ACTIVITY_DATA">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+        <Editors />
+      </Attr>
+      <Attr id="ACTIVITY_DATA.DESCRIPTION" kind="Data" expr="DESCRIPTION" caption="DESCRIPTION" type="WideString" size="100" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ACTIVITY_DATA">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+        <Editors />
+      </Attr>
+      <Attr id="ACTIVITY_DATA.ACTIVITY" kind="Data" expr="ACTIVITY" caption="ACTIVITY" type="WideString" size="767" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ACTIVITY_DATA">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+        <Editors />
+      </Attr>
+      <Attr id="ACTIVITY_DATA.STRING_VALUE" kind="Data" expr="STRING_VALUE" caption="STRING_VALUE" type="WideString" size="255" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ACTIVITY_DATA">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+        <Editors />
+      </Attr>
+      <Attr id="ACTIVITY_DATA.DATA_Z_DIMENSION" kind="Data" expr="DATA_Z_DIMENSION" caption="DATA_Z_DIMENSION" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ACTIVITY_DATA">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+        <Editors />
+      </Attr>
+      <Attr id="ACTIVITY_DATA.NAME" kind="Data" expr="NAME" caption="NAME" type="WideString" size="255" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ACTIVITY_DATA">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+        <Editors />
+      </Attr>
+      <Attr id="ACTIVITY_DATA.REGION" kind="Data" expr="REGION" caption="REGION" type="WideString" size="511" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ACTIVITY_DATA">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+        <Editors />
+      </Attr>
+      <Attr id="ACTIVITY_DATA.TIME_POINT" kind="Data" expr="TIME_POINT" caption="TIME_POINT" type="Float" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ACTIVITY_DATA">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+        <Editors />
+      </Attr>
+      <Attr id="ACTIVITY_DATA.SUB_TIME_POINT" kind="Data" expr="SUB_TIME_POINT" caption="SUB_TIME_POINT" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ACTIVITY_DATA">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+        <Editors />
+      </Attr>
+      <Attr id="ACTIVITY_DATA.ID" kind="Data" expr="ID" caption="ID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ACTIVITY_DATA">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+        <Editors />
+      </Attr>
+      <Attr id="ACTIVITY_DATA.VARIABLE_TYPE_ID" kind="Data" expr="VARIABLE_TYPE_ID" caption="VARIABLE_TYPE_ID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ACTIVITY_DATA">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+        <Editors />
+      </Attr>
+      <Attr id="ACTIVITY_DATA.INPUT_COMMODITY_ID" kind="Data" expr="INPUT_COMMODITY_ID" caption="INPUT_COMMODITY_ID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ACTIVITY_DATA">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+        <Editors />
+      </Attr>
+      <Attr id="ACTIVITY_DATA.OUTPUT_COMMODITY_ID" kind="Data" expr="OUTPUT_COMMODITY_ID" caption="OUTPUT_COMMODITY_ID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ACTIVITY_DATA">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+        <Editors />
+      </Attr>
+      <Attr id="ACTIVITY_DATA.TIME_POINT_ID" kind="Data" expr="TIME_POINT_ID" caption="TIME_POINT_ID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ACTIVITY_DATA">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+        <Editors />
+      </Attr>
+      <Attr id="ACTIVITY_DATA.SUB_TIME_POINT_ID" kind="Data" expr="SUB_TIME_POINT_ID" caption="SUB_TIME_POINT_ID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ACTIVITY_DATA">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+        <Editors />
+      </Attr>
+      <Attr id="ACTIVITY_DATA.DATA_VALUE2" kind="Data" expr="DATA_VALUE" caption="DATA_VALUE" type="Float" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ACTIVITY_DATA">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+        <Editors />
+      </Attr>
+      <Attr id="ACTIVITY_DATA.DATA_ROW2" kind="Data" expr="DATA_ROW" caption="DATA_ROW" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ACTIVITY_DATA">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+        <Editors />
+      </Attr>
+      <Attr id="ACTIVITY_DATA.DATA_COLUMN2" kind="Data" expr="DATA_COLUMN" caption="DATA_COLUMN" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ACTIVITY_DATA">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+        <Editors />
+      </Attr>
+      <Attr id="ACTIVITY_DATA.STRING_VALUE2" kind="Data" expr="STRING_VALUE" caption="STRING_VALUE" type="WideString" size="255" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ACTIVITY_DATA">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+        <Editors />
+      </Attr>
+      <Attr id="ACTIVITY_DATA.REVISION_ID" kind="Data" expr="REVISION_ID" caption="REVISION_ID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ACTIVITY_DATA">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+        <Editors />
+      </Attr>
+      <Attr id="ACTIVITY_DATA.DATA_Z_DIMENSION2" kind="Data" expr="DATA_Z_DIMENSION" caption="DATA_Z_DIMENSION" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ACTIVITY_DATA">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+        <Editors />
+      </Attr>
+      <Attr id="ACTIVITY_DATA.REGION_ID" kind="Data" expr="REGION_ID" caption="REGION_ID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ACTIVITY_DATA">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+        <Editors />
+      </Attr>
+      <Attr id="ACTIVITY_DATA.DIFFERENCE" kind="Data" expr="DIFFERENCE" caption="DIFFERENCE" type="WideString" size="1" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ACTIVITY_DATA">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+        <Editors />
+      </Attr>
+      <Attr id="ACTIVITY_DATA.ACTIVITY_ID" kind="Data" expr="ACTIVITY_ID" caption="ACTIVITY_ID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="ACTIVITY_DATA">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+        <Editors />
+      </Attr>
+    </Entity>
+    <Entity name="LINK" UIC="False" UIR="False" UIS="False">
+      <UserData />
+      <Attr id="LINK.ID" kind="Data" expr="ID" caption="ID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="LINK">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+        <Editors />
+      </Attr>
+      <Attr id="LINK.SOURCE_ACTIVITY_ID" kind="Data" expr="SOURCE_ACTIVITY_ID" caption="SOURCE_ACTIVITY_ID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="LINK">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+        <Editors />
+      </Attr>
+      <Attr id="LINK.DESTINATION_ACTIVITY_ID" kind="Data" expr="DESTINATION_ACTIVITY_ID" caption="DESTINATION_ACTIVITY_ID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="LINK">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+        <Editors />
+      </Attr>
+      <Attr id="LINK.BASE_SCENARIO" kind="Data" expr="BASE_SCENARIO" caption="BASE_SCENARIO" type="Bool" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="LINK">
+        <Operators>IsTrue,NotTrue</Operators>
+        <Editors />
+      </Attr>
+      <Attr id="LINK.COMMODITY_ID" kind="Data" expr="COMMODITY_ID" caption="COMMODITY_ID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="LINK">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+        <Editors />
+      </Attr>
+    </Entity>
+    <Entity name="LINK_DATA" UIC="False" UIR="False" UIS="False">
+      <UserData />
+      <Attr id="LINK_DATA.ID" kind="Data" expr="ID" caption="ID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="LINK_DATA">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+        <Editors />
+      </Attr>
+      <Attr id="LINK_DATA.LINK_ID" kind="Data" expr="LINK_ID" caption="LINK_ID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="LINK_DATA">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+        <Editors />
+      </Attr>
+      <Attr id="LINK_DATA.TIME_POINT_ID" kind="Data" expr="TIME_POINT_ID" caption="TIME_POINT_ID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="LINK_DATA">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+        <Editors />
+        <Description />
+      </Attr>
+      <Attr id="LINK_DATA.SUB_TIME_POINT_ID" kind="Data" expr="SUB_TIME_POINT_ID" caption="SUB_TIME_POINT_ID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="LINK_DATA">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+        <Editors />
+      </Attr>
+      <Attr id="LINK_DATA.REVISION_ID" kind="Data" expr="REVISION_ID" caption="REVISION_ID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="LINK_DATA">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+        <Editors />
+      </Attr>
+      <Attr id="LINK_DATA.QUANTITY_AS_RATE" kind="Data" expr="QUANTITY_AS_RATE" caption="QUANTITY_AS_RATE" type="Float" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="LINK_DATA">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+        <Editors />
+      </Attr>
+      <Attr id="LINK_DATA.WEIGHTED_PRICE" kind="Data" expr="WEIGHTED_PRICE" caption="WEIGHTED_PRICE" type="Float" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="LINK_DATA">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+        <Editors />
+      </Attr>
+    </Entity>
+    <Entity name="REGION" UIC="False" UIR="False" UIS="False">
+      <UserData />
+      <Attr id="REGION.ID" kind="Data" expr="ID" caption="ID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="REGION">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+        <Editors />
+        <Description />
+      </Attr>
+      <Attr id="REGION.BASE_SCENARIO" kind="Data" expr="BASE_SCENARIO" caption="BASE_SCENARIO" type="Bool" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="REGION">
+        <Operators>IsTrue,NotTrue</Operators>
+        <Editors />
+      </Attr>
+      <Attr id="REGION.PARENT_REGION_ID" kind="Data" expr="PARENT_REGION_ID" caption="PARENT_REGION_ID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="REGION">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+        <Editors />
+      </Attr>
+      <Attr id="REGION.PATH" kind="Data" expr="PATH" caption="PATH" type="WideString" size="255" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="REGION">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+        <Editors />
+        <Description />
+      </Attr>
+    </Entity>
+    <Entity name="SUB_TIME_POINT" UIC="False" UIR="False" UIS="False">
+      <UserData />
+      <Attr id="SUB_TIME_POINT.ID" kind="Data" expr="ID" caption="ID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="SUB_TIME_POINT">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+        <Editors />
+      </Attr>
+      <Attr id="SUB_TIME_POINT.SUB_TIME_SET_ID" kind="Data" expr="SUB_TIME_SET_ID" caption="SUB_TIME_SET_ID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="SUB_TIME_POINT">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+        <Editors />
+        <Description />
+      </Attr>
+      <Attr id="SUB_TIME_POINT.FRACTION_HOURS" kind="Data" expr="FRACTION_HOURS" caption="FRACTION_HOURS" type="Float" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="SUB_TIME_POINT">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+        <Editors />
+      </Attr>
+    </Entity>
+    <Entity name="TIME_POINT" UIC="False" UIR="False" UIS="False">
+      <UserData />
+      <Attr id="TIME_POINT.ID" kind="Data" expr="ID" caption="ID" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="True" aggr="False" tables="TIME_POINT">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+        <Editors />
+        <Description />
+      </Attr>
+    </Entity>
+    <Entity name="Dashboard_Columns" UIC="True" UIR="True" UIS="True">
+      <UserData />
+      <Attr id="ACTIVITY.NAME" kind="Data" expr="NAME" caption="ACTIVITY_NAME" type="WideString" size="255" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="False" aggr="False" tables="ACTIVITY">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+        <Editors>
+          <Default id="SqlList2" type="SQLLIST" resType="Unknown">
+            <SQL><![CDATA[Select id,name from activity]]></SQL>
+          </Default>
+        </Editors>
+        <Description />
+      </Attr>
+      <Attr id="LINK_DATA.QUANTITY" kind="Data" expr="QUANTITY" caption="QUANTITY" type="Float" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="False" aggr="False" tables="LINK_DATA">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+        <Editors />
+        <Description />
+      </Attr>
+      <Attr id="LINK_DATA.PRICE" kind="Data" expr="PRICE" caption="PRICE" type="Float" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="False" aggr="False" tables="LINK_DATA">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+        <Editors />
+        <Description />
+      </Attr>
+      <Attr id="SUB_TIME_POINT.SUB_TIME_POINT" kind="Data" expr="SUB_TIME_POINT" caption="SUB_TIME_POINT" type="Int" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="False" aggr="False" tables="SUB_TIME_POINT">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+        <Editors />
+        <Description />
+      </Attr>
+      <Attr id="TIME_POINT.TIME_POINT" kind="Data" expr="TIME_POINT" caption="TIME_POINT" type="Float" size="0" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="False" aggr="False" tables="TIME_POINT">
+        <Operators>Equal,Between,LessThan,LessOrEqual,GreaterThan,GreaterOrEqual,InList,NotEqual,NotBetween,NotInList,MaximumOfAttr,InSubQuery,IsNull,IsNotNull</Operators>
+        <Editors>
+          <Default id="SqlList1" type="SQLLIST" resType="Unknown">
+            <SQL><![CDATA[select * from TIME_POINT]]></SQL>
+          </Default>
+        </Editors>
+        <Description />
+      </Attr>
+      <Attr id="REGION.NAME" kind="Data" expr="NAME" caption="REGION_NAME" type="WideString" size="255" UIC="True" UIR="True" UIS="True" customFunc="" quote="False" UAL="False" aggr="False" tables="REGION">
+        <Operators>StartsWith,Contains,Equal,InList,NotStartsWith,NotContains,NotEqual,NotInList,InSubQuery,IsNull,IsNotNull</Operators>
+        <Editors>
+          <Default id="SqlList3" type="SQLLIST" resType="Unknown">
+            <SQL><![CDATA[select id, name from Region]]></SQL>
+          </Default>
+        </Editors>
+        <Description />
+      </Attr>
+    </Entity>
+  </Entities>
+</DataModel>

@@ -1,0 +1,15 @@
+D:\Projects\Kalitte\Source.Code\JDash.InMemoryAnalytics\JDash.InMemoryAnalytics\bin\Debug\JDash.InMemoryAnalytics.dll
+D:\Projects\Kalitte\Source.Code\JDash.InMemoryAnalytics\JDash.InMemoryAnalytics\bin\Debug\JDash.InMemoryAnalytics.pdb
+D:\Projects\Kalitte\Source.Code\JDash.InMemoryAnalytics\JDash.InMemoryAnalytics\obj\Debug\JDash.InMemoryAnalytics.dll
+D:\Projects\Kalitte\Source.Code\JDash.InMemoryAnalytics\JDash.InMemoryAnalytics\obj\Debug\JDash.InMemoryAnalytics.pdb
+D:\Projects\Kalitte\Source.Code\JDash.InMemoryAnalytics\JDash.InMemoryAnalytics\obj\Debug\JDash.InMemoryAnalytics.csprojResolveAssemblyReference.cache
+C:\Users\tansu\projects\Kalitte\nlp-source\JDash.InMemoryAnalytics\JDash.InMemoryAnalytics\bin\Debug\JDash.InMemoryAnalytics.dll
+C:\Users\tansu\projects\Kalitte\nlp-source\JDash.InMemoryAnalytics\JDash.InMemoryAnalytics\bin\Debug\JDash.InMemoryAnalytics.pdb
+C:\Users\tansu\projects\Kalitte\nlp-source\JDash.InMemoryAnalytics\JDash.InMemoryAnalytics\obj\Debug\JDash.InMemoryAnalytics.csprojResolveAssemblyReference.cache
+C:\Users\tansu\projects\Kalitte\nlp-source\JDash.InMemoryAnalytics\JDash.InMemoryAnalytics\obj\Debug\JDash.InMemoryAnalytics.dll
+C:\Users\tansu\projects\Kalitte\nlp-source\JDash.InMemoryAnalytics\JDash.InMemoryAnalytics\obj\Debug\JDash.InMemoryAnalytics.pdb
+E:\Projects\Kalitte\nlp-source\JDash.InMemoryAnalytics\JDash.InMemoryAnalytics\bin\Debug\JDash.InMemoryAnalytics.dll
+E:\Projects\Kalitte\nlp-source\JDash.InMemoryAnalytics\JDash.InMemoryAnalytics\bin\Debug\JDash.InMemoryAnalytics.pdb
+E:\Projects\Kalitte\nlp-source\JDash.InMemoryAnalytics\JDash.InMemoryAnalytics\obj\Debug\JDash.InMemoryAnalytics.csprojResolveAssemblyReference.cache
+E:\Projects\Kalitte\nlp-source\JDash.InMemoryAnalytics\JDash.InMemoryAnalytics\obj\Debug\JDash.InMemoryAnalytics.dll
+E:\Projects\Kalitte\nlp-source\JDash.InMemoryAnalytics\JDash.InMemoryAnalytics\obj\Debug\JDash.InMemoryAnalytics.pdb

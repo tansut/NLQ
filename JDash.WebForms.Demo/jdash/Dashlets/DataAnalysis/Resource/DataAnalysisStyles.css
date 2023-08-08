@@ -1,0 +1,113 @@
+﻿.stepCounter
+{
+    margin-top: 5px;
+    left: 0;
+    right: 0;
+    margin: 7px auto;
+    width: 100%;
+}
+
+/*.wizard
+{
+    height: 270px;
+    border: 1px solid #cccccc;
+    padding: 8px;
+    width: 466px;
+}*/
+
+/*.wizardPager
+{
+    width: 500px;
+}*/
+
+.ctlSQLContainer{
+    height:815px;
+    width:455px;
+}
+
+.wizard .caption b
+{
+    float: right;
+}
+
+.pagenumber
+{
+    display: block;
+    margin-top: 1px;
+    float: left;
+}
+
+.pagerbtn
+{
+    border: none;
+    padding: 0px 30px;
+}
+
+.pagernext
+{
+    background: url('img/arrowr.png') no-repeat;
+    background-position: right;
+    margin-right: 20px;
+    float: right;
+}
+
+.pagerprevious
+{
+    background: url('img/arrowl.png') no-repeat;
+    background-position: left;
+    margin-right: 100px;
+    float: left;
+}
+
+.pagerbtn[disabled]
+{
+    background: none;
+}
+
+.caption
+{
+    display: block;
+    clear:both;
+}
+
+    .caption span
+    {
+        display: block;
+        margin-bottom: 4px;
+    }
+
+.cubecombo
+{
+    font-weight: bold;
+}
+
+.alert-success
+{
+
+}
+
+.right-control
+{
+    margin-left: 8px;
+}
+
+.textbox-halfwidth
+{
+    width: 220px !important;
+}
+
+.textbox-fullwidth
+{
+    width: 466px !important;
+}
+
+.chart-item {
+    float:left;
+    margin-left:50px;
+}
+
+.chart-text  td {
+    float:left;
+    margin-left:38px;
+    margin-top:10px;
+}

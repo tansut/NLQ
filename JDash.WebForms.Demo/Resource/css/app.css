@@ -1,0 +1,356 @@
+﻿.d-styles-list {
+    padding-top: 9px;
+}
+
+.nav .d-styles-list a {
+    width: 32px !important;
+    height: 32px !important;
+    margin-right: 8px !important;
+}
+
+.themeStylesList a:hover {
+    border: 1px dashed #111;
+}
+
+.designSwitch {
+    margin-top: 10px;
+}
+
+
+.dashTools {
+    border-radius: 0px;
+    background-color: #ffffff;
+    border-left-style: none;
+    border-right-style: none;
+}
+
+.createDashboardLink {
+    color: #ddd !important;
+}
+
+.appBusy {
+    background-color: #FFF1A8;
+    color: black;
+    left: 0px;
+    padding: 3px 6px;
+    position: fixed;
+    bottom: 0px;
+    z-index: 10000;
+}
+
+
+
+.sloganContainer .btn-toolbar > div {
+    margin-bottom: 5px;
+}
+
+.sloganContainer {
+    border: solid #e2e2e2 1px;
+    background-color: #ffffff;
+    margin-top: -20px;
+    -webkit-box-shadow: 1px 1px 1px rgba(50, 50, 50, 0.22);
+    -moz-box-shadow: 1px 1px 1px rgba(50, 50, 50, 0.22);
+    box-shadow: 1px 1px 1px rgba(50, 50, 50, 0.22);
+}
+
+
+    .sloganContainer h1 {
+        -webkit-text-shadow: 1px 1px 2px rgba(255, 255, 255, 1);
+        text-shadow: 1px 1px 2px rgba(255, 255, 255, 1);
+    }
+
+    .sloganContainer .btn-toolbar {
+        padding-top: 20px;
+    }
+
+
+
+.dashStatus {
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 90px;
+    width: 90px;
+    text-align: center;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    background-color: #fff;
+    font-size: 90%;
+    color: gray;
+    left: 50%;
+    padding: 3px 6px;
+    position: fixed;
+    top: 0;
+    z-index: 10000;
+    -webkit-border-bottom-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    -moz-box-shadow: rgba(0,0,0,0.246094) 0px -3px 5px, rgba(0,0,0,0.246094) 0px 3px 5px;
+    -webkit-box-shadow: rgba(0,0,0,0.246094) 0px -3px 5px, rgba(0,0,0,0.246094) 0px 3px 5px;
+    box-shadow: rgba(0,0,0,0.246094) 0px -3px 5px, rgba(0,0,0,0.246094) 0px 3px 5px;
+}
+
+.d-dashboard-loadStatus {
+    width: auto !important;
+    height: auto !important;
+    min-height: 25px;
+}
+
+
+
+.demo-content {
+}
+
+    .demo-content h1, .demo-content h2, .demo-content h3 {
+        font-weight: bold;
+        display: block;
+        margin-bottom: 3px;
+        line-height: 20px;
+    }
+
+    .demo-content h1 {
+        font-size: 24px;
+        margin-bottom: 8px;
+        line-height: 30px;
+    }
+
+    .demo-content h2 {
+        font-size: 16px;
+    }
+
+    .demo-content h3 {
+        font-size: 14px;
+        margin-bottom: 1px;
+    }
+
+
+.homeNote .d-dashlet-content {
+    padding: 0px;
+    background-color: #E6E6E6;
+}
+
+.homeNote div.col {
+    padding: 7px;
+}
+
+
+.homeRow1 .d-dashlet-content {
+    height: 350px;
+}
+
+.homeRow2 .d-dashlet-content {
+    height: 500px;
+}
+
+.homeRow3 .d-dashlet-content {
+    height: 350px;
+}
+
+.d-dashlet-pane {
+}
+
+.h220 .d-dashlet-content {
+    height:220px;
+}
+
+.d-dashboard-content {
+    overflow: visible !important;
+}
+
+
+body {
+    background-color: #f7f7f7;
+}
+
+    body.j-theme-flat.j-style-b {
+        background-color: #2d2d30;
+    }
+
+        body.j-theme-flat.j-style-b .d-dashlet-content {
+            color: #f9f6f6;
+        }
+
+        body.j-theme-flat.j-style-b .sloganContainer {
+            background-color: #222;
+            border-color: #080808;
+            -webkit-box-shadow: 1px 1px 1px rgba(0,0,0,0.246094);
+            -moz-box-shadow: 1px 1px 1px rgba(0,0,0,0.246094);
+            box-shadow: 1px 1px 1px rgba(0,0,0,0.246094);
+            color: #f9f6f6;
+        }
+
+        body.j-theme-flat.j-style-b .dashTools {
+            background-color: #222;
+            border-color: #080808;
+        }
+
+            body.j-theme-flat.j-style-b .dashTools a:hover {
+                color: #ffffff;
+            }
+
+            body.j-theme-flat.j-style-b .dashTools .navbar-default .navbar-nav > .open > a,
+            body.j-theme-flat.j-style-b .dashTools.navbar-default .navbar-nav > .open > a:hover,
+            body.j-theme-flat.j-style-b .dashTools.navbar-default .navbar-nav > .open > a:focus {
+                background-color: #111;
+            }
+
+            body.j-theme-flat.j-style-b .dashTools .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+                background-color: #222;
+            }
+
+             body.j-theme-flat.j-style-b .d-dashlet-content a {
+            
+             }
+
+
+
+        body.j-theme-flat.j-style-b .sloganContainer h1 {
+            -webkit-text-shadow: 1px 1px 2px black;
+            text-shadow: 1px 1px 2px black;
+        }
+
+#dashboardDropdown {
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+html,
+body {
+}
+
+#footer {
+    height: 60px;
+}
+
+#footer {
+    position: relative;
+    text-align: center;
+}
+
+
+@media (max-width: 767px) {
+    #footer {
+        margin-left: -20px;
+        margin-right: -20px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+.nopad .d-dashlet-content {
+    padding: 0px;
+}
+
+.aspnetForm {
+    margin: 0px;
+}
+
+div.form {
+    width: 100%;
+}
+
+    div.form .item input[type="text"], div.form .item textarea, div.form .item select {
+        width: 100%;
+    }
+
+    div.form input[type="text"] {
+        padding-right: 0px !important;
+    }
+
+    div.form .itemGroup .item input[type="text"], div.form .itemGroup .item textarea, div.form .itemGroup .item select {
+        width: 98%;
+    }
+
+    div.form .itemGroup .item:last-child input[type="text"], div.form .itemGroup .item:last-child textarea, div.form .itemGroup .item:last-child select {
+        float: right;
+    }
+
+    div.form .itemGroup .item {
+        width: 48%;
+    }
+
+        div.form .itemGroup .item:last-child {
+            float: right;
+        }
+
+    div.form .itemGroup div.item {
+        float: left;
+    }
+
+
+
+    div.form .itemGroup:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    div.form .item span:first-child {
+        display: block;
+        margin-bottom: 3px;
+    }
+
+    div.form .itemGroup .item:last-child span {
+        display: block;
+        margin-bottom: 3px;
+        margin-left: 5px;
+    }
+
+    div.form .item {
+        margin-bottom: 6px;
+    }
+
+        div.form .item.h {
+        }
+
+            div.form .item.h span:first-child {
+                display: inline;
+                margin-right: 7px;
+            }
+
+        div.form .item:last-child {
+            margin-bottom: 0px;
+        }
+
+.dashboardForm .controls .checkBox {
+    margin-top: 0px;
+}
+
+#dashletGroupContent ul li {
+}
+
+.DashletLibrary .glyphicon-bookmark:before {
+    content: "\e043" !important;
+}
+
+.Visualizations .glyphicon-bookmark:before {
+    content: "\e060" !important;
+}
+
+.Samples .glyphicon-bookmark:before {
+    content: "\2a" !important;
+}
+
+.RssFeeds .glyphicon-bookmark:before {
+    content: "\e122" !important;
+}
+
+.DataAnalysis .glyphicon-bookmark:before {
+    content: "\e185" !important;
+}
+
+.iconContainer div {
+    margin-right: 3px;
+}
+
+.groupTab > li > a {
+    padding: 6px 6px !important;
+}
+.ajax__tab_xp .ajax__tab_tab {
+    height:22px !important;
+}

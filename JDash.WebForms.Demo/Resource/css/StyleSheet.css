@@ -1,0 +1,530 @@
+/* base config */
+*{
+    padding:0;
+    margin:0;
+}
+
+body, p, td, th, div{
+    font-size: 12px;
+    margin:0;
+    padding:0;
+}
+
+table{
+    border-spacing:0;
+    border:none;
+}
+
+div{
+    display:block;
+}
+
+img{
+    border:none;
+}
+
+/**/
+
+/* load fonts */
+/* INCLUDED FONTS ------------------------------------------------------------------------------- */
+
+@font-face {
+    -moz-osx-font-smoothing: grayscale !important;
+    -webkit-font-smoothing: antialiased !important;
+    font-family: 'FrutigerLTStd-Roman';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/Frutiger/26EC61_0_0.eot');
+    src: url('../fonts/Frutiger/26EC61_0_0.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Frutiger/26EC61_0_0.woff') format('woff'),
+         url('../fonts/Frutiger/26EC61_0_0.ttf') format('truetype');
+}
+
+@font-face {
+    -moz-osx-font-smoothing: grayscale !important;
+    -webkit-font-smoothing: antialiased !important;
+    -webkit-text-stroke: 1px !important;
+    font-family: "glyphicons";
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    src: url(../fonts/glyphicons-halflings-regular.ttf) format("truetype");
+}
+
+@font-face {
+    -moz-osx-font-smoothing: grayscale !important;
+    -webkit-font-smoothing: antialiased !important;
+    font-family: 'icomoon';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/icomoon.eot');
+    src: url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/icomoon.woff') format('woff'),
+         url('../fonts/icomoon.ttf') format('truetype'),
+         url('../fonts/icomoon.svg#icomoon') format('svg');
+}
+
+/**/
+textarea {
+	font-family: Verdana, "Courier New", Geneva, Arial, Helvetica,  sans-serif;
+	font-size: 11px;
+	color: #333333;
+}
+
+/*setting to all page */
+#main{
+    width:1174px;
+    background: #fff;
+    margin:auto;
+    padding-top:10px;
+}
+
+/* title */
+.IndexTitle{
+    padding: 0 0 4% 3%;
+    color: #3A94D4;
+    font-size: 20px;
+   
+}
+
+.IndexTitle a{
+    color: #3A94D4 !important;
+    text-decoration: none;
+}
+
+.IndexTitle a:hover{
+    text-decoration:underline;
+}
+
+/* sub-title*/
+.IndexTitle div{
+	font-weight: bold;
+	color: #3a94d4;	
+}
+
+/* header */
+.header{
+    display:block;
+    height:30px;
+}
+
+/* buttons in header */
+.headerButtons{
+    display:inline-block;
+    padding-top: 2px;
+    padding-left:328px;
+}
+
+/* clear button in header */
+.clearButton {
+    background: url('../img/EasyQuery/clearButton.png') no-repeat;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    color: #fff;
+    width: 135px ;
+    height: 32px;
+    cursor: pointer;
+    padding: .4em 1em !important;
+}
+
+/* execute button in header */
+.executeButton {
+    background: url('../img/EasyQuery/execute.png') no-repeat;
+     border:none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    color:#fff;
+    width:135px;
+    height:32px;
+    padding-left:25px;
+    margin-left:10px;
+    cursor:pointer;
+    padding: .4em 1em !important;
+}
+
+
+/* save button in header */
+.saveButton{
+    background: url('../img/EasyQuery/saveButton.png') no-repeat;
+    border:none;
+    font-family:Segoe UI;
+    font-size:15px;
+    color:#fff;
+    width:135px;
+    height:32px;
+    padding-left:25px;
+    margin-left:10px;
+    cursor:pointer;
+}
+
+
+/* content */
+#content{
+    background: #f6f6f6;
+    border:2px solid #dedede;
+    padding-top: 5%;
+    padding-left: 2%;
+    height: 100vh;
+}
+
+/* all colum Entities */
+.eqdax-entitiesPanel {
+    border: 1px solid #C4D6E5;
+    display: inline-block;
+    background: white;
+    _overflow:hidden;
+    *zoom:1;
+    *display:inline;
+}
+
+/* right blocks */
+.eqdax-rightBlocks {
+    display:inline-block;
+    vertical-align:top;
+    _overflow:hidden;
+    *zoom:1;
+    *display:inline;
+}
+/* div - results and colums sorting */
+.eqdax-columnsBlock {
+    display:inline-block;
+    vertical-align:top;
+}
+
+/* result column div */
+.eqdax-resultColumn{
+    display: inline-block;
+    height: 189px;
+    margin-left: 16px;
+    background: white;
+    border: 1px solid #C1D5E4;
+    font-size: 20px;
+    font-family: 'Conv_segoeuil',Sans-Serif;
+    font-weight: normal;
+    color: #4F4F4F;
+    _overflow:hidden;
+    *zoom:1;
+    *display:inline;
+}
+
+/* div - column sorting */
+.eqdax-columnSorting-block{
+    display: inline-block;
+    height: 189px;
+    margin-left: 16px;
+    background: white;
+    border: 1px solid #C1D5E4;
+    _overflow:hidden;
+    *zoom:1;
+    *display:inline;
+}
+
+/* border -top in result colum */
+.eqdax-topBorder-block{
+    background: #1777B1;
+    height: 6px;
+}
+
+/* top border in entities column */
+.eqdax-entitiesBorder{
+    background: #7BC4F8;
+    height: 6px;
+}
+
+/* content bot - sql and query result */
+.eqdax-resultBlock{
+    padding-top: 4%;
+}
+
+/* sql column div */
+#eqdax-sqlPanel{
+    height: 270px;
+    border: 1px solid #C4D6E5;
+    display: inline-block;
+    background: white;
+    vertical-align: top;
+    _overflow:hidden;
+    *zoom:1;
+    *display:inline !important;
+}
+
+/* top border Sql panel */
+.eqdax-topBorderSQL{
+    background: #A8ABAD;
+    height: 6px;
+}
+
+/* top border all result */
+.eqdax-topBorderUpdatePanel{
+    background: #237901;
+    height: 6px;
+}
+
+/* language - top */
+.comboLang{
+    text-align:right;
+    font-family:Calibri;
+    font-size:11px;
+    padding-bottom:10px;
+}
+/* version text */
+.version{
+    color: #aeaeae;
+    font-size: 11px;
+    font-family: Calibri;
+    padding-left:70px;
+}
+
+/* margin & padding for ff */
+button::-moz-focus-inner { 
+    border: 0;
+    padding: 0;
+}
+/**/
+
+/* new css*/
+.eqdax-resultColumn-title{
+    font:100 18pt "Segoe UI Light", "Segoe Light", "Segoe UI", Arial, Helvetica, sans-serif;
+    float:left;
+    padding:0 0 0 10px;
+    zoom:1;
+    *display:block;
+    *position:absolute;
+}
+
+.eqdax-columnSorting-title{
+    font:100 18pt "Segoe UI Light", "Segoe Light", "Segoe UI", Arial, Helvetica, sans-serif;
+    float:left;
+    padding:0 0 0 10px;
+    color: #4F4F4F;
+    zoom:1;
+    *display:block;
+    *position:absolute;
+}
+
+.eqdax-queryConditions-title{
+    font:100 18pt "Segoe UI Light", "Segoe Light", "Segoe UI", Arial, Helvetica, sans-serif;
+    float:left;
+    padding:0 0 0 10px;
+    zoom:1;
+    *display:block;
+    *position:absolute; 
+}
+
+.eqdax-entitiesTitle{
+    font: 100 18pt "Segoe UI Light", "Segoe Light", "Segoe UI", Arial, Helvetica, sans-serif;
+    color: #4F4F4F;
+    padding:0 0 10px 10px;
+    background: #F8F7F7;
+    border-bottom: 1px solid #7BC4F8;
+}
+
+.eqdax-resultPanel-title{
+    font: 100 18pt "Segoe UI Light", "Segoe Light", "Segoe UI", Arial, Helvetica, sans-serif;
+    padding: 4px 0 0 10px;
+    color: #4F4F4F;
+    float: left;
+}
+
+.eqdax-sqlTitle{
+    font: 100 18pt "Segoe UI Light", "Segoe Light", "Segoe UI", Arial, Helvetica, sans-serif;
+    color: #4F4F4F;
+    padding: 0 0 8px 10px;
+    background: #F8F7F7;
+    border-bottom: 1px solid #A8ABAD;
+}
+
+.eqdax-conditionsPanel {
+    background: white;
+    height: 194px;
+    margin: 17px 0 0 16px;
+    border: 1px solid #C1D5E4;
+    color: #4F4F4F;
+}
+
+.eqdax-resultPanel-actions{
+    float:right;
+    padding-top:14px;    
+}
+
+.eqdax-resultPanel-updateButton{
+    background-image: url('/Resource/img/EasyQuery/updateResultButton.png');
+    background-color: transparent;
+    background-position: center left;
+    background-repeat: no-repeat;
+    border: none;
+    color: #237901;
+    font: normal 16px Calibri;
+    text-decoration: underline;
+    padding-left: 25px;
+    margin-right: 20px;
+    margin-left: 35px;
+    cursor: pointer;
+    zoom:1;
+    *padding-left:5px;
+}
+.eqdax-resultPanel-export {
+    float:right;
+    padding-top: 14px;
+     
+}
+
+.eqdax-resultPanel-exportButton{
+   /* background-image: url('images/exportResultButton.png');*/
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center left;
+    border: none;
+    color: #237901;
+    font: normal 16px Calibri;
+    text-decoration: underline;
+    padding-left: 25px;
+    padding-right: 10px;
+    cursor: pointer;
+    zoom:1;
+    *padding-left:5px;
+}
+
+.eqdax-updatePanel-bottomBorder{
+    background: #F8F7F7;
+    border-bottom: 1px solid #237901;
+    padding:0 0 4px 0;
+    height: 36px;
+}
+
+#PanelResult{
+    height: 200px;
+    width:800px;
+    overflow: auto;
+    margin: 10px 10px 0 10px;
+}
+
+.eqdax-entities-table{
+    padding: 2px 0 0;
+}
+.eqdax-entities-table img{
+    padding:0 6px 0 0;
+}
+
+.copyright{
+    text-align:center;
+    display:block;
+    font-size:12px;
+    font-family:Calibri;
+    color:#000;
+    padding-top:14px;
+}
+
+.copyright a{
+    color:#237901 !important;
+}
+
+/*new name's eqdax style */
+.eqdax-resultColumn-addRow{
+    border-bottom: 1px solid #1777B1;
+    height: 35px;
+}
+.eqdax-resultColumn-addRow span{
+    float: right;
+    padding: 10px 10px 0 0;
+}
+.eqdax-resultColumn-addRow span a{
+    padding: 4px 0 4px 27px;
+    padding: 4px 0 6px 27px;
+    background: url('/Resource/img/EasyQuery/addNew.png') no-repeat center left;
+    font: normal 15px Calibri;
+    color: #1777B1;
+}
+
+.eqdax-columnSorting-addRow{
+    border-bottom: 1px solid #1777B1;
+    height: 35px;
+}
+.eqdax-columnSorting-addRow span{
+    float: right;
+    padding: 10px 10px 0 0;
+}
+.eqdax-columnSorting-addRow span a{
+    padding: 5px 0 5px 25px;
+    padding: 5px 0 7px 25px;
+    background: url('/Resource/img/EasyQuery/addNew.png') no-repeat center left;
+    font: normal 15px Calibri;
+    color: #1777B1;
+}
+
+.eqdax-queryCondition-addRow{
+    border-bottom: 1px solid #1777B1;
+    height: 35px;
+    background: #F8F7F7;
+}
+.eqdax-queryCondition-addRow span{
+    float: right;
+    padding: 10px 10px 0 0;
+}
+.eqdax-queryCondition-addRow span a{
+    padding: 5px 0 4px 25px;
+    background: url('/Resource/img/EasyQuery/addNew.png') no-repeat center left;
+    font: normal 15px Calibri;
+    color: #1777B1;
+}
+
+.eqdax-sqlPanel-block{
+    padding: 7px 10px;
+    width: 270px;
+}
+.eqdax-sqlPanel-textBox {
+    -moz-resize: none;
+    -ms-resize: none;
+    -o-resize: none;
+    resize: none;
+    outline: none;
+    border: none;
+    border-width: 0;
+    height: 208px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.eqdax-resultTable{
+    display: inline-block;
+    background: white;
+    margin-left: 16px;
+    border: 1px solid #C1D5E4;
+    width: 818px;
+    height: 270px;
+    _overflow:hidden;
+    *zoom:1;
+    *display:inline !important;
+}
+
+.right-side{
+    float: right;
+}
+
+.error-label{
+    color: Red;
+    font-weight: bold;
+}
+
+#EntitiesPanel1{
+    height: 351px !important;
+    width: 250px !important;
+}
+
+#QueryColumnsPanel1{
+    height: 128px !important;
+    width: 467px !important;
+}
+
+#SortColumnsPanel1{
+    height: 128px !important;
+    width: 330px !important;
+}
+
+#QueryPanel1{
+    height: 133px !important;
+    width: 818px !important;
+}

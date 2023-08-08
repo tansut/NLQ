@@ -1,0 +1,68 @@
+﻿
+/*Header */
+.headerLogo {
+    height: 30px;
+    width: auto;
+    margin: -4px 0 0 0 !important;
+}
+
+.nBreak { display: inline !important; }
+
+.delGreen { color: #92d400; }
+
+.nRadB {
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+.container-fluid {
+    padding-left: 25px;
+    padding-right: 25px
+}
+.radT{
+	    border-top-left-radius: 4px !important;
+	    border-top-right-radius: 4px !important;
+	    border-bottom-right-radius: 0px !important;
+	    border-bottom-left-radius: 0px !important;
+    } 
+
+/* Footer CSS*/
+.nPadL {
+    padding-left: 0 !important;
+}
+
+.nPadR {
+    padding-right: 0 !important;
+}
+
+.padT {
+    padding-top: 12px !important;
+}
+
+.footer {
+    font-size: 12px !important;
+    height: 20px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 0;
+    padding-left: 25px;
+    padding-right: 25px;
+    width: 100%;
+}
+
+.clear { clear: both !important }
+.fRight { float: right !important; }
+.wrap {
+    height: auto;
+    /* Negative indent footer by its height */
+    margin: 0 auto -20px;
+    min-height: 100%;
+    /* Pad bottom by footer height */
+    padding: 0 0 20px;
+}
+.spacer { height: 20px !important; }
+
+.textbox-height input[type="text"] {
+   height: 24px;
+   font-size: 12px;
+   line-height: 24px;
+}

@@ -1,0 +1,15 @@
+D:\Projects\Kalitte\Source.Code\Helpers\bin\Debug\Helpers.dll
+D:\Projects\Kalitte\Source.Code\Helpers\bin\Debug\Helpers.pdb
+D:\Projects\Kalitte\Source.Code\Helpers\obj\Debug\Helpers.csprojResolveAssemblyReference.cache
+D:\Projects\Kalitte\Source.Code\Helpers\obj\Debug\Helpers.dll
+D:\Projects\Kalitte\Source.Code\Helpers\obj\Debug\Helpers.pdb
+C:\Users\tansu\projects\Kalitte\nlp-source\Helpers\bin\Debug\Helpers.dll
+C:\Users\tansu\projects\Kalitte\nlp-source\Helpers\bin\Debug\Helpers.pdb
+C:\Users\tansu\projects\Kalitte\nlp-source\Helpers\obj\Debug\Helpers.csprojResolveAssemblyReference.cache
+C:\Users\tansu\projects\Kalitte\nlp-source\Helpers\obj\Debug\Helpers.dll
+C:\Users\tansu\projects\Kalitte\nlp-source\Helpers\obj\Debug\Helpers.pdb
+E:\Projects\Kalitte\nlp-source\Helpers\bin\Debug\Helpers.dll
+E:\Projects\Kalitte\nlp-source\Helpers\bin\Debug\Helpers.pdb
+E:\Projects\Kalitte\nlp-source\Helpers\obj\Debug\Helpers.csprojResolveAssemblyReference.cache
+E:\Projects\Kalitte\nlp-source\Helpers\obj\Debug\Helpers.dll
+E:\Projects\Kalitte\nlp-source\Helpers\obj\Debug\Helpers.pdb
